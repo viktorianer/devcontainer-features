@@ -1,0 +1,3 @@
+feature: feature/*
+bugfix: ["bug/*", "bugfix/*", "hotfix/*", "fix/*"]
+improvement: improvement/*
