@@ -18,7 +18,11 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "ffmpeg is installed" bash -c "ffmpeg -version | grep 'ffmpeg version'"
+# Check if libpq-dev is installed
+check "libpq-dev installed" bash -c "dpkg -l | grep libpq-dev"
+
+# Check if PostgreSQL client (version 17) is installed
+check "PostgreSQL client version 17 installed" bash -c "psql --version | grep -E 'PostgreSQL.*17(\.[0-9]+)?'"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
