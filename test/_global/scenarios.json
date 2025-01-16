@@ -1,13 +1,14 @@
 {
-    "color_and_hello": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "color": {
-                "favorite": "purple"
-            },
-            "hello": {
-                "greeting": "Greetings"
-            }
-        }
+  "apt_with_postgresql_client": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "apt": {
+        "version": "1",
+        "devFile": "Aptfile.dev"
+      },
+      "ghcr.io/rails/devcontainer/features/postgres-client": {
+        "version": "17"
+      }
     }
+  }
 }
