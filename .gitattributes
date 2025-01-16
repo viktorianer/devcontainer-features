@@ -1,0 +1,47 @@
+# line endings
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf
+yarn.lock text eol=lf
+*.sh text eol=lf
+
+# Excludes documentation files from your project's language stats.
+doc/* linguist-documentation
+
+# Set standard handling for shell script files
+*.sh linguist-language=Shell
+
+*.html              diff=html
+*.css               diff=css
+*.scss              diff=css
+*.md                diff=markdown
+*.rb                diff=ruby
+*.rake              diff=ruby
+*.gemspec           diff=ruby
+*.json              diff=json
+*.yaml              diff=yaml
+*.yml               diff=yaml
+*.js                diff=javascript
+*.jsx               diff=javascript
+*.ts                diff=typescript
+*.tsx               diff=typescript
+package.json        diff=json
+package-lock.json   diff=json
+yarn.lock           diff=plaintext
+*.sh                diff=sh
+
+# Make your credentials diff readable
+config/credentials/*.yml.enc diff=rails_credentials
+config/credentials.yml.enc diff=rails_credentials
+
+# Global fallback for text files
+*.txt text
